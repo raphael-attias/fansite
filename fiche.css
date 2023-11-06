@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+html {
+    background-image: url(pict/back.jpg);
+}
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+header {
+    background-color: dimgray; /* Arrière-plan de l'en-tête */
+    color: whitesmoke; /* Couleur du texte dans l'en-tête */
+    padding: 15px; /* Espace autour du contenu de l'en-tête */
+    border-radius: 10px;
+}
+
+/* Style de base pour la barre de navigation */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2px;
+    color: whitesmoke;
+    border-radius: 10px;
+    background-color: dimgray;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    background-color: dimgray;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: larger;
+    font-weight: bold;
+    background-color: dimgray;
+    color: whitesmoke;
+}
+
+/* Style au survol des liens */
+nav a:hover {
+    text-decoration: underline;
+    color: whitesmoke;
+    background-color: dimgray;
+}
+
+/* Style pour la barre de recherche */
+.search-box {
+    display: flex;
+    color: whitesmoke;
+    background-color: dimgray;
+}
+
+.search-box input {
+    padding: 5px;
+    border: 1px solid whitesmoke;
+    border-radius: 4px;
+    color: whitesmoke;
+
+}
+
+.search-box button {
+    background-color: dimgray;
+    color: whitesmoke;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+/* Style au survol du bouton de recherche */
+.search-box button:hover {
+    background-color: greenyellow;
+}
+
+/* Ajout de styles pour rendre la barre de navigation responsive */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav li {
+        margin-right: 0;
+        
+    }
+}
+
+/*main*/
+main{
+    padding: 20px;
+    color: aliceblue;
+}
+
+h1{
+    text-align: center;
+    font-size: 2em;
+    text-decoration: double;
+    margin-bottom: 50px;
+}
+h2 {
+    margin-left: 110px;
+    text-decoration-line: underline;
+}
+
+h3, p {
+    text-align: left;
+    padding-left: 30px;
+}
+
+/*image*/
+
+.img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    list-style: none;
+}
+
+.img li {
+    flex: 0 1 calc(50% - 20px);
+    text-align: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.img h3, .img p {
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.img img {
+    max-width: 300px;
+    height: auto;
+    border: 1px solid darkolivegreen;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+.act {
+    max-width: 50%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto; /* Centre l'image horizontalement */
+    padding: 25px;
+}
+
+
+/* biography*/
+.bio {
+    text-align: center; /* Centre le contenu dans l'article */
+    list-style: none;
+}
+.bio>p {
+    margin-left: 30px;
+}
+
+.bio h3{
+    margin-left: 50px;
+    list-style: none;
+}
+.bio img {
+    width: 500px;
+    height: auto;
+    justify-content: center;
+}
+
+.bio li{
+    list-style: none;
+}
+
+/*formulaire*/
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: darkblue; 
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: darkorchid;
+}
+
+label {
+    background-color: darkblue;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: larger;
+    margin-bottom: 10px;
+    display: block;
+}
+
+
+/* Style pour les zones de texte et les boutons */
+input[type="text"],
+select,
+input[type="email"],
+input[type="tel"] {
+    width: 85%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px; 
+    text-align: left;
+    font-weight: bold;
+    font-size: larger;
+    color: darkorchid;
+}
+
+textarea#message {
+    width: 85%;
+    min-height: 100px; /* Hauteur minimale */
+    resize: vertical; /* Permet la redimensionnement vertical */
+}
+
+
+
+/* Style pour le bouton de validation */
+button {
+    background-color: dimgray;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: larger;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+button:hover {
+    background-color: darkslategray;
+}
+
+
+/* Media query pour la mise en forme responsive */
+@media (max-width: 768px) {
+    form {
+        max-width: 100%; /* Boîte de contact prendra toute la largeur de l'écran */
+        padding: 10px; /* Ajustement de la marge interne pour les petits écrans */
+    }
+    
+    label {
+        margin-bottom: 5px; 
+    }
+}
+/* les region et entrer du telephone*/
+.telephone-input {
+    display: flex;
+    align-items: center;
+}
+
+.telephone-input input[type="tel"] {
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px; /* Espace entre la case de sélection et le champ de saisie */
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-align: left;
+}
+
+/*pied de page*/
+footer {
+    background-color: dimgray;
+    color: whitesmoke   ;
+    padding: 20px; 
+    border-radius: 10px;
+}
+
+footer img {
+    max-width: 25px;
+    max-height: auto;
+    display: inline-block;
+    margin: 0;
+}
