@@ -1,15 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
+
 html {
     background-image: url(pict/back.jpg);
+    background-size: cover;
 }
+
 * {
     font-family: 'Montserrat', sans-serif;
 }
+
 header {
-    background-color: dimgray; /* Arrière-plan de l'en-tête */
-    color: whitesmoke; /* Couleur du texte dans l'en-tête */
-    padding: 15px; /* Espace autour du contenu de l'en-tête */
+    background-color: dimgray;
+    /* Arrière-plan de l'en-tête */
+    color: whitesmoke;
+    /* Couleur du texte dans l'en-tête */
+    padding: 15px;
+    /* Espace autour du contenu de l'en-tête */
     border-radius: 10px;
 }
 
@@ -33,13 +40,13 @@ nav ul {
 }
 
 nav li {
-    margin-right: 20px;
+    margin-right: 30px;
 }
 
 nav a {
     text-decoration: none;
     color: whitesmoke;
-    font-size: larger;
+    font-size: medium;
     font-weight: bold;
     background-color: dimgray;
     color: whitesmoke;
@@ -79,7 +86,7 @@ nav a:hover {
 
 /* Style au survol du bouton de recherche */
 .search-box button:hover {
-    background-color: greenyellow;
+    background-color: royalblue;
 }
 
 /* Ajout de styles pour rendre la barre de navigation responsive */
@@ -96,28 +103,42 @@ nav a:hover {
 
     nav li {
         margin-right: 0;
-        
+
     }
 }
 
 /*main*/
-main{
+main {
     padding: 20px;
     color: aliceblue;
 }
 
-h1{
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
+
+h1 {
     text-align: center;
     font-size: 2em;
     text-decoration: double;
     margin-bottom: 50px;
 }
+
+.titre {
+    font-family: 'Comforta', sans-serif;
+    text-align: center;
+    font-size: 2em;
+    text-decoration: double;
+    margin-bottom: 50px;
+
+}
+
+
 h2 {
     margin-left: 110px;
     text-decoration-line: underline;
 }
 
-h3, p {
+
+p {
     text-align: left;
     padding-left: 30px;
 }
@@ -140,7 +161,8 @@ h3, p {
     gap: 15px;
 }
 
-.img h3, .img p {
+.img h3,
+.img p {
     text-align: center;
     padding-left: 40px;
     padding-right: 40px;
@@ -156,45 +178,107 @@ h3, p {
     margin-bottom: 30px;
 }
 
+.contact img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    margin: auto;
+}
+
+.img1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    list-style: none;
+}
+
+.img1 li {
+    flex: 0 1 calc(25% - 20px);
+    /* Répartit l'espace sur 4 colonnes */
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.img1 img {
+    max-width: 275px;
+    /* Pour que les images s'ajustent à la largeur de leur conteneur */
+    height: auto;
+    border-radius: 5px;
+    padding: 10px;
+    border: 2px solid black;
+    margin-bottom: 30px;
+}
+
+
 .act {
     max-width: 50%;
     height: auto;
     border-radius: 5px;
     display: block;
-    margin: 0 auto; /* Centre l'image horizontalement */
+    margin: 0 auto;
+    /* Centre l'image horizontalement */
     padding: 25px;
 }
 
 
 /* biography*/
 .bio {
-    text-align: center; /* Centre le contenu dans l'article */
+    text-align: center;
+    /* Centre le contenu dans l'article */
     list-style: none;
-}
-.bio>p {
-    margin-left: 30px;
 }
 
-.bio h3{
-    margin-left: 50px;
-    list-style: none;
+.bio>p {
+    margin: 20px 80px 20px 80px;
+    text-align: left;
 }
+
+.bio h3 {
+    text-align: left;
+    list-style: none;
+    margin: 25px 100px 25px 100px;
+    text-decoration-line: underline;
+}
+
 .bio img {
     width: 500px;
     height: auto;
     justify-content: center;
 }
 
-.bio li{
+.bio li {
     list-style: none;
 }
+
+/*ffact qui se devoile*/
+.ffact p {
+    display: none;
+    transition: opacity 10s;
+    /* Ajout d'une transition d'opacité */
+}
+
+.ffact:hover p {
+    display: block;
+    opacity: 1;
+    /* L'opacité passe de 0 à 1 lors du survol */
+}
+
+.ffact img:hover+p {
+    display: block;
+    opacity: 1;
+    /* L'opacité passe de 0 à 1 lors du survol de l'image */
+}
+
 
 /*formulaire*/
 form {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 25px auto;
     padding: 20px;
-    background-color: darkblue; 
+    background-color: darkblue;
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -221,7 +305,7 @@ input[type="tel"] {
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
-    border-radius: 10px; 
+    border-radius: 10px;
     text-align: left;
     font-weight: bold;
     font-size: larger;
@@ -230,8 +314,10 @@ input[type="tel"] {
 
 textarea#message {
     width: 85%;
-    min-height: 100px; /* Hauteur minimale */
-    resize: vertical; /* Permet la redimensionnement vertical */
+    min-height: 100px;
+    /* Hauteur minimale */
+    resize: vertical;
+    /* Permet la redimensionnement vertical */
 }
 
 
@@ -256,14 +342,17 @@ button:hover {
 /* Media query pour la mise en forme responsive */
 @media (max-width: 768px) {
     form {
-        max-width: 100%; /* Boîte de contact prendra toute la largeur de l'écran */
-        padding: 10px; /* Ajustement de la marge interne pour les petits écrans */
+        max-width: 100%;
+        /* Boîte de contact prendra toute la largeur de l'écran */
+        padding: 10px;
+        /* Ajustement de la marge interne pour les petits écrans */
     }
-    
+
     label {
-        margin-bottom: 5px; 
+        margin-bottom: 5px;
     }
 }
+
 /* les region et entrer du telephone*/
 .telephone-input {
     display: flex;
@@ -273,7 +362,8 @@ button:hover {
 .telephone-input input[type="tel"] {
     flex: 1;
     padding: 10px;
-    margin-right: 10px; /* Espace entre la case de sélection et le champ de saisie */
+    margin-right: 10px;
+    /* Espace entre la case de sélection et le champ de saisie */
     border: 1px solid #ccc;
     border-radius: 3px;
     text-align: left;
@@ -282,14 +372,76 @@ button:hover {
 /*pied de page*/
 footer {
     background-color: dimgray;
-    color: whitesmoke   ;
-    padding: 20px; 
+    color: whitesmoke;
+    padding: 20px;
     border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
-footer img {
+/* Style pour chaque colonne */
+.f1,
+.f2,
+.f3,
+.f4 {
+    text-align: center;
+}
+
+/* Style pour les titres */
+h4 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* Style pour les icônes */
+.f1 img {
     max-width: 25px;
     max-height: auto;
-    display: inline-block;
-    margin: 0;
+    margin: 10px 0;
+}
+
+/* Style pour les liens */
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+/* Style pour le texte du dernier élément */
+.f4 p {
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+
+
+/*source actu*/
+.news-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f2f2f2;
+    /* Couleur de fond grise */
+}
+
+
+iframe {
+    width: 100%;
+    height: 600px;
+    /* Réglez la hauteur en fonction de vos besoins */
+    border: none;
+    /* Supprime la bordure autour de l'iframe */
+}
+
+/*separateur*/
+.separator {
+    /*separateur visuel*/
+    width: 100%;
+    height: 3px;
+    background-color: #ccc;
+    /* Couleur de la barre horizontale */
+    margin: 20px 0;
+    /* Marge au-dessus et en dessous de la barre */
 }
