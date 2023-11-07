@@ -141,6 +141,7 @@ h2 {
 p {
     text-align: left;
     padding-left: 30px;
+    font-size: medium;
 }
 
 /*image*/
@@ -166,6 +167,7 @@ p {
     text-align: center;
     padding-left: 40px;
     padding-right: 40px;
+    font-size: medium;
 }
 
 .img img {
@@ -234,6 +236,7 @@ p {
 .bio>p {
     margin: 20px 80px 20px 80px;
     text-align: left;
+    font-size: medium;
 }
 
 .bio h3 {
@@ -256,14 +259,16 @@ p {
 /*ffact qui se devoile*/
 .ffact p {
     display: none;
-    transition: opacity 10s;
-    /* Ajout d'une transition d'opacité */
+    transition: opacity 10s; /* Ajout d'une transition d'opacité */
+    font-size: medium;
+   
 }
 
 .ffact:hover p {
     display: block;
-    opacity: 1;
-    /* L'opacité passe de 0 à 1 lors du survol */
+    opacity: 1;/* L'opacité passe de 0 à 1 lors du survol */
+    font-size: medium;
+    
 }
 
 .ffact img:hover+p {
@@ -378,6 +383,20 @@ footer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    list-style: none;
+}
+
+footer li{
+    list-style: none;
+}
+.liensocial {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les éléments verticalement */
+}
+
+.f1 img {
+    display: block;
 }
 
 /* Style pour chaque colonne */
@@ -444,4 +463,9 @@ iframe {
     /* Couleur de la barre horizontale */
     margin: 20px 0;
     /* Marge au-dessus et en dessous de la barre */
+}
+
+/*cliquer ici grossi*/
+.augmentepassage:hover {
+    font-size: 1.2em; /* Taille de police augmentée au passage de la souris */
 }
