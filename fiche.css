@@ -399,6 +399,7 @@ footer li{
     display: block;
 }
 
+
 /* Style pour chaque colonne */
 .f1,
 .f2,
@@ -415,6 +416,11 @@ h4 {
 
 /* Style pour les icônes */
 .f1 img {
+    max-width: 25px;
+    max-height: auto;
+    margin: 10px 0;
+}
+.f2 img {
     max-width: 25px;
     max-height: auto;
     margin: 10px 0;
