@@ -385,7 +385,12 @@ footer {
     gap: 20px;
     list-style: none;
 }
-
+/* Style au survol des liens */
+footer a:hover {
+    text-decoration: underline;
+    color: whitesmoke;
+    background-color: dimgray;
+}
 footer li{
     list-style: none;
 }
